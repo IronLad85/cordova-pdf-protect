@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="my-cordova-plugin"
+    id="pdf-protect"
     version="1.0.0">
-    <name>Cordova Plugin Template</name>
+    <name>Android Protect PDF</name>
     <description></description>
     <license>MIT</license>
     <keywords></keywords>
@@ -15,32 +15,32 @@
       <js-module src="www/plugin.js" name="plugin">
         <runs/>
 
-        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-        <clobbers target="MyCordovaPlugin" />
+        <!-- This is the window variable name you want, like window.PDF_Protect -->
+        <clobbers target="cordova.plugins.PDF_Protect" />
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="MyCordovaPlugin">
-          <param name="android-package" value="com.example.MyCordovaPlugin" />
+        <feature name="PDF_Protect">
+          <param name="android-package" value="com.source.PDF_Protect" />
           <param name="onload" value="true" />
         </feature>
       </config-file>
-
-      <source-file src="src/android/com/example/MyCordovaPlugin.java" target-dir="src/com/example/" />
+      <framework src="./build.gradle" custom="true" type="gradleReference" />
+      <source-file src="src/android/com/source/PDF_Protect.java" target-dir="src/com/source/" />
     </platform>
 
     <!-- ios -->
     <platform name="ios">
         <js-module src="www/plugin.js" name="plugin">
             <runs/>
-            <clobbers target="MyCordovaPlugin" />
+            <clobbers target="cordova.plugins.PDF_Protect" />
         </js-module>
         <config-file target="config.xml" parent="/*">
-            <feature name="MyCordovaPlugin">
-                <param name="ios-package" value="MyCordovaPlugin" onload="true" />
+            <feature name="PDF_Protect">
+                <param name="ios-package" value="PDF_Protect" onload="true" />
             </feature>
         </config-file>
 
-        <header-file src="src/ios/MyCordovaPlugin.h" />
-        <source-file src="src/ios/MyCordovaPlugin.m" />
+        <header-file src="src/ios/PDF_Protect.h" />
+        <source-file src="src/ios/PDF_Protect.m" />
     </platform>
 </plugin>

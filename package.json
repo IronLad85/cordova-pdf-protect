@@ -1,12 +1,12 @@
 {
-  "name": "cordova-plugin-template",
+  "name": "cordova-pdf-protect",
   "version": "1.0.0",
   "cordova": {
-    "id": "cordova-plugin-template",
+    "id": "cordova-pdf-protect",
     "platforms": [
       "android",
       "ios"
     ]
   },
-  "description": "A starting point for a Cordova Plugin"
+  "description": "Protect your pdf files with password in Cordova / Ionic projects with this simple plugin"
 }

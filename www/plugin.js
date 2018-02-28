@@ -1,15 +1,14 @@
-
 var exec = require('cordova/exec');
 
-var PLUGIN_NAME = 'MyCordovaPlugin';
+var PLUGIN_NAME = 'PDF_Protect';
 
-var MyCordovaPlugin = {
-  echo: function(phrase, cb) {
-    exec(cb, null, PLUGIN_NAME, 'echo', [phrase]);
+var PDF_Protect = {
+  echo: function(phrase, onSuccess, onError) {
+    exec(onSuccess, onError, PLUGIN_NAME, 'echo', [phrase]);
   },
-  getDate: function(cb) {
-    exec(cb, null, PLUGIN_NAME, 'getDate', []);
+  addPassword: function(filepath, passcode, onSuccess, onError) {
+    exec(onSuccess, onError, PLUGIN_NAME, 'protectPDF', [filepath, passcode]);
   }
 };
 
-module.exports = MyCordovaPlugin;
+module.exports = PDF_Protect;
