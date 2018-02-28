@@ -1,9 +1,20 @@
-<<<<<<< HEAD
-Cordova Plugin Template
-======
-
 This is a simple starting point for building a Cordova plugin on iOS and Android.
-=======
+
 # cordova-pdf-protect
 Protect your pdf files with password in Cordova / Ionic projects with this simple plugin
->>>>>>> 203263879d4be2aed6734f2a5d431bc5d69ee600
+
+### Usage ###
+#### PDF_Protect.addPassword(NativeFileUrl, Password, SuccessCallback, FailureCallback) ####
+
+### example (Ionic 2) ###
+
+declare const cordova: any;
+
+cordova.plugins.PDF_Protect.addPassword(res.nativeURL, 'hello',
+  function(res: any) {
+    console.log(res);
+    resolve();
+  },
+  function(error: any) {
+    reject(error);
+  })
