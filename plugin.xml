@@ -9,15 +9,14 @@
     <keywords></keywords>
     <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
     <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
+    <js-module src="www/plugin.js" name="plugin">
+      <runs/>
+      <!-- This is the window variable name you want, like window.PDF_Protect -->
+      <clobbers target="cordova.plugins.PDF_Protect" />
+    </js-module>
 
     <!-- android -->
     <platform name="android">
-      <js-module src="www/plugin.js" name="plugin">
-        <runs/>
-
-        <!-- This is the window variable name you want, like window.PDF_Protect -->
-        <clobbers target="cordova.plugins.PDF_Protect" />
-      </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="PDF_Protect">
           <param name="android-package" value="com.source.PDF_Protect" />
@@ -30,17 +29,14 @@
 
     <!-- ios -->
     <platform name="ios">
-        <js-module src="www/plugin.js" name="plugin">
-            <runs/>
-            <clobbers target="cordova.plugins.PDF_Protect" />
-        </js-module>
-        <config-file target="config.xml" parent="/*">
-            <feature name="PDF_Protect">
-                <param name="ios-package" value="PDF_Protect" onload="true" />
-            </feature>
-        </config-file>
-
-        <header-file src="src/ios/PDF_Protect.h" />
-        <source-file src="src/ios/PDF_Protect.m" />
+      <config-file parent="/*" target="config.xml">
+        <feature name="PDFProtector">
+            <param name="ios-package" value="PDFProtector" />
+        </feature>
+      </config-file>
+      <source-file src="src/ios/PDFGenerateError.swift" />
+      <source-file src="src/ios/PDFPassword.swift" />
+      <source-file src="src/ios/PDFProtector.swift" />
     </platform>
+
 </plugin>
