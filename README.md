@@ -1,6 +1,8 @@
 # cordova-pdf-protect
 Protect your pdf files with password in Cordova / Ionic projects with this simple plugin
 
+# If this project has helped you out, please support us with a star 🌟
+
 ### Usage
 ##### PDF_Protect.addPassword(NativeFileUrl, Password, SuccessCallback, FailureCallback)
 
