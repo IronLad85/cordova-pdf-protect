@@ -9,12 +9,12 @@ Protect your pdf files with password in Cordova / Ionic projects with this simpl
 ```javascript
 declare const cordova: any;
 
-cordova.plugins.PDF_Protect.addPassword(res.nativeURL, 'hello',
+cordova.plugins.PDF_Protect.addPassword(res.nativeURL, 'Your_Password',
     function(res) {
-      // On Success  Code Here
+      // On Success
    },
    function(error) {
-     // On Failure  Code Here
+     // On Failure 
    });
 
 ```
